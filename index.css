@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+#welcome{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+}
+
+#modes , #welcomeline{
+    padding: 50px;
+}
+
+#modes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70vw;
+    background-color: pink;
+}
+
+#modes div {
+    width: 20vw;
+    height: auto;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items :center;
+    flex-direction: column;
+}
+
+.modeImg{
+    width: 80%;
+}
+
+#singleplayer{
+    padding: 40px;
+}
