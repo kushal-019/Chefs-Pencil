@@ -104,6 +104,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or feedback, please reach out to [your-email@example.com](mailto:your-kgoel8451@gmail.com).
+For any questions or feedback, please reach out to [Kushal Goel](mailto:your-kgoel8451@gmail.com).
 
 ---
