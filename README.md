@@ -1,4 +1,3 @@
-Sure, I can help you draft a README file for your "2 Truths and a Lie" game in JavaScript. This README will cover the project overview, installation instructions, usage, and other relevant details.
 
 ---
 
@@ -13,6 +12,7 @@ Sure, I can help you draft a README file for your "2 Truths and a Lie" game in J
 - **Interactive Gameplay**: Users can select which statement they think is the lie.
 - **Randomized Statements**: Statements are randomly shuffled for each round.
 - **Score Tracking**: Keeps track of the user's score as they play.
+- **Two player mode**: 2 Users can play at same time and select which statement they think is the lie.
 
 ## Installation
 
@@ -21,13 +21,14 @@ To get started with the game, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/2-truths-and-a-lie.git
+   git clone https://github.com/kushal-019/TwoTruthOneLie.git
+   
    ```
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd 2-truths-and-a-lie
+   cd TwoTruthOneLie
    ```
 
 3. **Open the Game**
@@ -43,13 +44,21 @@ To get started with the game, follow these steps:
 1. **Starting the Game**
 
    - Open `index.html` in your web browser.
+
+   - You will see 2 options appear asking for single or double mode
+   - Chose your mode and play accordinglly
+
    - You will see three statements on the screen.
    - Click on the statement you believe is the lie.
 
-2. **Scoring**
 
+2. **Scoring**
+   **For single player mode**
    - After selecting a statement, feedback will be provided indicating whether your choice was correct.
    - Your score will be updated accordingly.
+
+   **For double player mode**
+   - feedback will be provided once both have chosen their options
 
 3. **Replay**
 
@@ -60,6 +69,7 @@ To get started with the game, follow these steps:
 - `index.html`: The main HTML file that contains the game structure.
 - `styles.css`: The CSS file for styling the game interface.
 - `script.js`: The JavaScript file that contains the game logic.
+- `data.js` : This file contains Json data used in website.
 
 ## Example Code
 
@@ -67,9 +77,10 @@ Here’s a snippet of how the game logic is implemented in `script.js`:
 
 ```javascript
 const statements = [
-    { truth1: "I have been to Paris.", truth2: "I can speak Spanish.", lie: "I have a pet elephant." },
-    { truth1: "I love pizza.", truth2: "I have visited 10 countries.", lie: "I am an astronaut." },
-    // Add more sets of statements here
+    {
+      "set": ["Samantha climbed Mount Fuji in Japan.", "She spent a few days on a remote island in Australia.", "She has never tasted sushi before."],
+      "answer": "She has never tasted sushi before."
+    },
 ];
 
 function getRandomStatements() {
@@ -93,8 +104,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+For any questions or feedback, please reach out to [your-email@example.com](mailto:your-kgoel8451@gmail.com).
 
 ---
-
-Feel free to adjust the content according to the specific details of your project!
