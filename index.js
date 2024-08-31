@@ -1,36 +1,73 @@
-import {paragraph , questionset}  from "./data.js"; 
+import {data}  from "./data.js"; 
 
 let single = document.getElementById("single");
 let double = document.getElementById("double");
-let singleplayer = document.getElementById("singleplayer");
-let doubleplayer = document.getElementById("doubleplayer");
-let submitBtn = document.getElementById("submitBtn");
+let options = document.getElementById("options");
 
 let questionsArray =  '';
+let paragraph =  '';
 let AnswerArray = [];
 
-function createQuestionArray(){
-    questionsArray =  '';
-    AnswerArray = [];
-    for(let i=0;i<questionset.length ; i++){
-        questionsArray += `<div key=${i}>
-        <input type="radio" class="radio" name="${i}_option" id="${i}_option1" value="${questionset[i].set[0]}">
-        <label for="${i}_option1">${questionset[i].set[0]}</label>
-        <br>
-        <input type="radio" class="radio" name="${i}_option" id="${i}_option2" value="${questionset[i].set[1]}">
-        <label for="${i}_option2">${questionset[i].set[1]}</label>
-        <br>
-        <input type="radio" class="radio" name="${i}_option" id="${i}_option3" value="${questionset[i].set[2]}">
-        <label for="${i}_option3">${questionset[i].set[2]}</label>
-        <br>
-        <br>
-    </div>`
-    
-        AnswerArray.push(questionset[i].answer);
+let SinglePlayerFlag = 0;
+
+
+// on selecting single player mode , this function is called and options of paragraphs available are displayed, select any and play for the same;
+single.addEventListener('click' , ()=>{
+    SinglePlayerFlag = 1;
+    displayOptions();
+})
+// on selecting double player mode , this function is called and options of paragraphs available are displayed, select any and play for the same;
+double.addEventListener('click' , ()=>{
+    SinglePlayerFlag = 0;
+    displayOptions();
+})
+
+//this function iterates over data.json and shows title of all present paragraphs.
+function displayOptions(){
+    const title = document.createElement('ul');
+    let len = data.length;
+
+    for (let i = 0; i < len; i++) {
+        let listItem = document.createElement('li');
+        listItem.id = i;
+        listItem.textContent = data[i].title;
+        listItem.addEventListener('click', () => showData(i, SinglePlayerFlag));
+        title.appendChild(listItem);
     }
-    questionsArray = "<br></br>"+questionsArray;
-    return ;
+    options.innerHTML = '';
+    options.appendChild(title);
 }
+
+//  code to display content of selected paragraph and update answer array with current paragraph array
+function showData(id, flag) {
+    AnswerArray = [];
+    paragraph = "";
+    questionsArray ="";
+
+    if (!data || !data[id] || !data[id].questionset) {
+        console.error('Invalid data or id.');
+        return;
+    }
+    paragraph = data[id].paragraph;
+    questionsArray = data[id].questionset
+    .map((question, index) => {
+            AnswerArray.push(question.answer);
+        return `<div>
+                ${question.set.map((option, optIndex) =>
+                    `<div>
+                        <input type="radio" id="question${id}_option${index}_${optIndex}" name="question${id}_${index}" value="${option}">
+                        <label for="question${id}_option${index}_${optIndex}">${option}</label>
+                    </div>`
+                ).join('')}
+        </div><br><br>`
+        })
+        .join('');
+
+        console.log(AnswerArray);
+
+    options.innerHTML = `<div>${paragraph}</div><br><br>` + questionsArray;
+}
+
 
 
 function evaluate(){
@@ -44,28 +81,12 @@ function evaluate(){
     alert(`You scored ${score} out of ${questionset.length}`);
 }
 
-function displaySingleplayerData(){
-    const paraDiv = document.createElement('div');
-    const questionDiv = document.createElement('div');
-    paraDiv.innerHTML = paragraph;    
 
-    createQuestionArray();
-    questionDiv.innerHTML = questionsArray;
 
-    while (singleplayer.firstChild) {
-        singleplayer.removeChild(singleplayer.firstChild);
-    }
-    singleplayer.appendChild(paraDiv);
-    singleplayer.appendChild(questionDiv);
-    
-}
-submitBtn.style.display = "none";
 
-single.addEventListener('click' , ()=>{
-    submitBtn.style.display = "block";
-    displaySingleplayerData();
-})
 
-submitBtn.addEventListener('click' , ()=>{
-    evaluate();
-})
+
+
+// submitBtn.addEventListener('click' , ()=>{
+//     evaluate();
+// })
