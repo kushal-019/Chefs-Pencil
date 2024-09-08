@@ -1,109 +1,45 @@
+# Chefs Pencil
 
----
-
-# 2 Truths and a Lie Game
-
-## Overview
-
-"2 Truths and a Lie" is a simple and engaging JavaScript game where players are presented with three statements: two truths and one lie. The objective is to identify which statement is the lie. This game is implemented using HTML, CSS, and JavaScript.
+Welcome to **Chefs Pencil**, a web application where users can discover, share, and contribute to an extensive collection of recipes. Whether you're a seasoned chef or a beginner, Chefs Pencil helps you explore exciting new dishes and easily filter them based on your preferences.
 
 ## Features
 
-- **Interactive Gameplay**: Users can select which statement they think is the lie.
-- **Randomized Statements**: Statements are randomly shuffled for each round.
-- **Score Tracking**: Keeps track of the user's score as they play.
-- **Two player mode**: 2 Users can play at same time and select which statement they think is the lie.
+### 1. Browse Recipes
+- Explore a diverse collection of recipes from various cuisines.
+- Each recipe includes:
+  - Ingredients list
+  - Step-by-step instructions
+  - Prep time, cook time, total time, and servings
+  - High-quality image of the final dish
+- Recipes can be filtered by category such as cuisine (e.g., Italian, Indian), meal type (e.g., Main Course, Appetizer), or dietary preferences (e.g., Vegetarian, Gluten-Free).
 
-## Installation
+### 2. Filter by Categories
+- Easily browse recipes based on specific categories:
+  - **Cuisine**: Italian, Indian, Mexican, Thai, etc.
+  - **Meal Type**: Main Course, Appetizer, Dessert, Soup, etc.
+  - **Dietary Preferences**: Vegetarian, Vegan, Gluten-Free, etc.
+- Use the category filter to find the perfect dish for any occasion.
 
-To get started with the game, follow these steps:
+### 3. Add New Recipes
+- Share your culinary creations with the world by submitting new recipes.
+- Add a detailed description, ingredients, instructions, and an image of your dish.
 
-1. **Clone the Repository**
+### 4. Search Functionality
+- Search by recipe name, ingredients, or keywords to quickly find a specific dish.
 
+## How to Add a New Recipe
+To contribute a recipe:
+1. Go to the "Add Recipe" page.
+2. Fill out the form with the recipe details:
+   - Name, description, prep time, cook time, servings.
+   - List of ingredients and step-by-step instructions.
+   - Upload a high-quality image of your dish.
+
+## Technology Stack
+- **Frontend**: HTML, CSS, JavaScript
+
+## Getting Started
+1. Clone the repository:
    ```bash
-   git clone https://github.com/kushal-019/TwoTruthOneLie.git
-   
-   ```
-
-2. **Navigate to the Project Directory**
-
-   ```bash
-   cd TwoTruthOneLie
-   ```
-
-3. **Open the Game**
-
-   You can open the `index.html` file in your web browser to start playing the game.
-
-   ```bash
-   open index.html
-   ```
-
-## Usage
-
-1. **Starting the Game**
-
-   - Open `index.html` in your web browser.
-
-   - You will see 2 options appear asking for single or double mode
-   - Chose your mode and play accordinglly
-
-   - You will see three statements on the screen.
-   - Click on the statement you believe is the lie.
-
-
-2. **Scoring**
-   **For single player mode**
-   - After selecting a statement, feedback will be provided indicating whether your choice was correct.
-   - Your score will be updated accordingly.
-
-   **For double player mode**
-   - feedback will be provided once both have chosen their options
-
-3. **Replay**
-
-   - Click on the "Play Again" button to start a new round with different statements.
-
-## Code Structure
-
-- `index.html`: The main HTML file that contains the game structure.
-- `styles.css`: The CSS file for styling the game interface.
-- `script.js`: The JavaScript file that contains the game logic.
-- `data.js` : This file contains Json data used in website.
-
-## Example Code
-
-Here’s a snippet of how the game logic is implemented in `script.js`:
-
-```javascript
-const statements = [
-    {
-      "set": ["Samantha climbed Mount Fuji in Japan.", "She spent a few days on a remote island in Australia.", "She has never tasted sushi before."],
-      "answer": "She has never tasted sushi before."
-    },
-];
-
-function getRandomStatements() {
-    const randomIndex = Math.floor(Math.random() * statements.length);
-    return statements[randomIndex];
-}
-
-// Function to handle user choices and check if they are correct
-function checkAnswer(selectedStatement) {
-    // Implement logic to check if the selected statement is the lie
-}
-```
-
-## Contributing
-
-If you’d like to contribute to the game, please fork the repository and submit a pull request with your changes. Ensure that you follow the code style and provide a description of your modifications.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or feedback, please reach out to [Kushal Goel](mailto:your-kgoel8451@gmail.com).
-
----
+   git clone https://github.com/yourusername/chefs-pencil.git
+   cd chefs-pencil
