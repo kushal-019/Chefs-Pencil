@@ -22,7 +22,7 @@ export const recipes = [
       "Toss the spaghetti with the bacon and egg mixture off the heat.",
       "Season with black pepper and salt to taste.",
     ],
-    image_url: "https://example.com/images/spaghetti-carbonara.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Italian", "Pasta", "Main Course"],
   },
   {
@@ -48,7 +48,7 @@ export const recipes = [
       "Add chicken and cook until browned.",
       "Add tomatoes and coconut milk, simmer until chicken is cooked through.",
     ],
-    image_url: "https://example.com/images/chicken-curry.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Indian", "Curry", "Main Course"],
   },
   {
@@ -71,7 +71,7 @@ export const recipes = [
       "Add croutons and grated Parmesan cheese.",
       "Serve immediately.",
     ],
-    image_url: "https://example.com/images/caesar-salad.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Salad", "Appetizer", "Healthy"],
   },
   {
@@ -96,7 +96,7 @@ export const recipes = [
       "Warm the tortillas.",
       "Assemble tacos with beef and your favorite toppings.",
     ],
-    image_url: "https://example.com/images/beef-tacos.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Mexican", "Main Course", "Tacos"],
   },
   {
@@ -119,7 +119,7 @@ export const recipes = [
       "Top with mozzarella and fresh basil.",
       "Bake in a hot oven until the crust is golden and cheese melts.",
     ],
-    image_url: "https://example.com/images/margherita-pizza.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Italian", "Pizza", "Main Course"],
   },
   {
@@ -144,7 +144,7 @@ export const recipes = [
       "Cook chicken in butter until browned.",
       "Add tomato paste and cream, simmer until the chicken is fully cooked.",
     ],
-    image_url: "https://example.com/images/butter-chicken.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Indian", "Curry", "Main Course"],
   },
   {
@@ -169,7 +169,7 @@ export const recipes = [
       "Add eggs and vanilla, then dry ingredients.",
       "Stir in chocolate chips and bake until golden brown.",
     ],
-    image_url: "https://example.com/images/chocolate-chip-cookies.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Dessert", "Baking", "Cookies"],
   },
   {
@@ -192,7 +192,7 @@ export const recipes = [
       "Add beef broth and simmer.",
       "Top with toasted baguette slices and melted Gruyère cheese.",
     ],
-    image_url: "https://example.com/images/french-onion-soup.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["French", "Soup", "Appetizer"],
   },
   {
@@ -218,7 +218,7 @@ export const recipes = [
       "Stir-fry chicken or shrimp with eggs and tamarind sauce.",
       "Toss with noodles, peanuts, and bean sprouts.",
     ],
-    image_url: "https://example.com/images/pad-thai.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Thai", "Noodles", "Main Course"],
   },
   {
@@ -241,7 +241,7 @@ export const recipes = [
       "Layer with tomato sauce and cheese in a baking dish.",
       "Bake until golden and bubbly.",
     ],
-    image_url: "https://example.com/images/eggplant-parmesan.jpg",
+    image_url: "https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg",
     categories: ["Italian", "Vegetarian", "Main Course"],
   },
 ];

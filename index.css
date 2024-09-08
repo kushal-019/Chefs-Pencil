@@ -1,0 +1,10 @@
+.Hide{
+    display: none;
+}
+.display{
+    display: block;
+}
+
+.recipe-image{
+    height: 200px;
+}

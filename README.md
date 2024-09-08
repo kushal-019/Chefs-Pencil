@@ -41,5 +41,5 @@ To contribute a recipe:
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/chefs-pencil.git
+   git clone https://github.com/kushal-019/Chefs-Pencil.git
    cd chefs-pencil
