@@ -3,13 +3,53 @@ import { categories, recipes } from "./data.js";
 let ListAllElement = document.getElementsByClassName("ListAll")[0];
 let backButton = document.getElementsByClassName("revButton")[0];
 let EachRecipeDetails = document.getElementsByClassName("details")[0];
+let FilterButton = document.getElementsByClassName("filter")[0];
 
-ListItems();
+
+const recipeArray = localStorage.getItem("RecipeArray");
+const currRecipeArray = recipeArray ? JSON.parse(recipeArray) : recipes;
+
+const categoriesArray = localStorage.getItem("categoriesArray");
+const Presentcategories = categoriesArray ? JSON.parse(categoriesArray) : categories;
 
 
-function ListItems() {
-    const recipeArray = localStorage.getItem("RecipeArray");
-    const currRecipeArray = recipeArray ? JSON.parse(recipeArray) : recipes;
+function displayDropDown(){
+
+    // Create the select element
+    const selectElement = document.createElement('div');
+    selectElement.id = 'categoryDropdown'; // Set ID for future reference
+
+    // Create and append option elements
+    Presentcategories.forEach(category => {
+        const option = document.createElement('div');
+        option.textContent = category;
+        option.addEventListener('click', function () {
+            const selectedCategory = this.textContent;
+            filterRecipesByCategory(selectedCategory);
+        });
+        selectElement.appendChild(option);
+    });
+
+    // Clear any existing content and append the new select element
+    FilterButton.innerHTML = '';
+    FilterButton.appendChild(selectElement);
+}
+
+
+function filterRecipesByCategory(category) {
+
+    // Filter recipes based on selected category
+    const filteredRecipes = currRecipeArray.filter(recipe =>
+        recipe.categories.includes(category)
+    );
+
+    ListItems(filteredRecipes);
+    
+}
+
+ListItems(currRecipeArray);
+
+function ListItems(currRecipeArray) {
 
     // Clear existing list items
     ListAllElement.innerHTML = "";
@@ -30,7 +70,7 @@ function ListItems() {
 
         // Add click event listener
         EachRecipe.addEventListener("click", function () {
-            displayInDetail(this.id);
+            displayInDetail(currRecipeArray[this.id -1]);
 
             backButton.classList.remove("Hide");
             EachRecipeDetails.classList.remove("Hide");
@@ -46,10 +86,7 @@ function ListItems() {
 }
 
 
-function displayInDetail(id) {
-    const recipeArray = localStorage.getItem("RecipeArray");
-    const currRecipeArray = recipeArray ? JSON.parse(recipeArray) : recipes;
-    const currRecipe = currRecipeArray[id];
+function displayInDetail(currRecipe) {
 
     // Clear existing content
     EachRecipeDetails.innerHTML = "";
@@ -76,6 +113,9 @@ function displayInDetail(id) {
 }
 
 
+FilterButton.addEventListener("click" , function(){
+    displayDropDown();
+})
 
 backButton.addEventListener("click", function (e) {
   backButton.classList.add("Hide");
