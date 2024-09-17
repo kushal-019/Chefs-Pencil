@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef's Pencil - Add New Recipie</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="container">
+        <!-- Header  -->
+      <div class="navbar">
+
+        <!-- Logo for the site -->
+        <div class="logo"><img src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg" style="height: 200px;"></div>
+
+        <!-- Navlinks -->
+        <div class="links">
+          <div class="home"><a href="index.html">Home</a></div>
+          <div class="addProduct"><a href="#">List New</a></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="Inputform">
+        <h1>Recipe Input Form</h1>
+        <form id="recipeForm">
+    
+          <label for="recipe_name">Recipe Name:</label>
+          <input type="text" id="recipe_name" name="recipe_name" required>
+    
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+    
+          <label for="prep_time">Prep Time:</label>
+          <input type="text" id="prep_time" name="prep_time" required>
+    
+          <label for="cook_time">Cook Time:</label>
+          <input type="text" id="cook_time" name="cook_time" required>
+    
+          <label for="total_time">Total Time:</label>
+          <input type="text" id="total_time" name="total_time" required>
+    
+          <label for="servings">Servings:</label>
+          <input type="number" id="servings" name="servings" required>
+    
+          <label for="ingredients">Ingredients (comma-separated):</label>
+          <input type="text" id="ingredients" name="ingredients" required>
+    
+          <label for="instructions">Instructions (separate with commas):</label>
+          <textarea id="instructions" name="instructions" rows="4" required></textarea>
+    
+          <label for="image_url">Image URL:</label>
+          <input type="url" id="image_url" name="image_url" required>
+    
+          <label for="categories">Categories (comma-separated):</label>
+          <input type="text" id="categories" name="categories" required>
+    
+          <button type="submit" >Submit Recipe</button>
+        </form>
+      </div>
+
+      
+      <!-- Footer -->
+      <div class="Footer">
+        <!-- Comment section -->
+        <div class="contactUs">
+            <p>Contact Us</p>
+            <textarea name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+
+            <button>Send</button>
+                
+        </div>
+        <!-- Some additional links -->
+        <div class="footerLinks">
+
+          <p>About</p>
+          <p>Careers</p>
+          <p>Team</p>
+          <p>Chefs One</p>
+          <p>chefs Instamart</p>
+
+        </div>
+        <div class="footerLinks">
+
+            <p>Ride with us</p>
+            <p>Legal</p>
+            <p>Terms & Conditions</p>
+            <p>Cookie Policy</p>
+            <p>Privacy Policy</p>
+            <p>Investor Relations</p>
+            
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="AddItem.js" type="module"></script>
 </html>

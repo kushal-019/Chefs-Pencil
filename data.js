@@ -247,6 +247,7 @@ export const recipes = [
 ];
 
 export const categories = [
+  "All",
   "Italian",
   "Pasta",
   "Main Course",
