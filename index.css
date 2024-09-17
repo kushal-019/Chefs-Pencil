@@ -1,10 +1,86 @@
-.Hide{
-    display: none;
+* {
+  margin: 0;
+  padding: 0;
 }
-.display{
-    display: block;
+
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 30%, #f9f5f5 100%),url(https://media.istockphoto.com/id/1191080960/photo/traditional-turkish-breakfast-and-people-taking-various-food-wide-composition.jpg?s=612x612&w=0&k=20&c=PP5ejMisEwzcLWrNmJ8iPPm_u-4P6rOWHEDpBPL2n7Q=);
+    background-size: 100vw 550px; 
+    background-repeat: no-repeat; 
+    background-color: #f9f5f5ec;
+    display: flex;
+    padding: 60px 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ListAll{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.content{
+    border-top-left-radius: 2rem ;
+    border-top-right-radius: 2rem ;
+    background-color: #f9f5f5ec;
+    overflow: hidden;
+    height: 500px;
+    width: 90%;
+    z-index: 1;
+}
+
+.recipe{
+    display: flex;
+    justify-content:space-evenly ;
+    background:rgb(238, 225, 198);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 250px;
+    flex-wrap: wrap;
+    height: 350px;
+    margin: 20px;
 }
 
 .recipe-image{
-    height: 200px;
+    position: relative;
+    width: 90%;
+    margin-left: 13px;
+    height: 60%;
 }
+.recipe-image-detail{
+    height: 350px;
+}
+.descOne{
+    width: 100%;
+}
+
+.details{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+}
+/* 
+background: rgb(255,176,0);
+background: linear-gradient(90deg, rgba(255,176,0,1) 0%, rgba(235,193,49,1) 29%, rgba(253,255,0,0.9159313383556548) 100%); 
+*/
+
+
+
+
+.Hide {
+    display: none;
+  }
