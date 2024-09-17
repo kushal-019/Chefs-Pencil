@@ -1,5 +1,6 @@
 import { categories, recipes } from "./data.js";
 
+// excessing all the elements from the DOM
 let ListAllElement = document.getElementsByClassName("ListAll")[0];
 let backButton = document.getElementsByClassName("revButton")[0];
 let EachRecipeDetails = document.getElementsByClassName("details")[0];
@@ -7,12 +8,18 @@ let FilterButton = document.getElementsByClassName("filter")[0];
 let FilterList = document.getElementsByClassName("filterlist")[0];
 let searchbar = document.getElementById("searchbar");
 
+// Fetching data and categories present in localstorage
 const recipeArray = localStorage.getItem("RecipeArray");
-const currRecipeArray = recipeArray ? JSON.parse(recipeArray) : recipes;
-
 const categoriesArray = localStorage.getItem("categoriesArray");
-const Presentcategories = categoriesArray
-  ? JSON.parse(categoriesArray)
+
+// updating data from data.js with localstorage recipies data
+const currRecipeArray = recipeArray 
+? [ ...recipes , ...JSON.parse(recipeArray)] 
+: recipes;
+
+// updating categories from data.js with localstorage categories data
+const Presentcategories = categoriesArray ?
+  [ ...categories , ...JSON.parse(categoriesArray)] 
   : categories;
 
 function displayDropDown() {
@@ -24,11 +31,11 @@ function displayDropDown() {
   Presentcategories.forEach((category) => {
     const option = document.createElement("div");
     option.textContent = category;
+    // adding functionallity associated to each option
     option.addEventListener("click", function () {
       const selectedCategory = this.textContent;
       FilterList.classList.add("Hide");
       FilterList.classList.remove("display");
-      // console.log(selectElement);
       filterRecipesByCategory(selectedCategory);
     });
     FilterList.appendChild(option);
@@ -60,7 +67,6 @@ function ListItems(currRecipeArray) {
     // Create list item and set its ID
     const EachRecipe = document.createElement("li");
     EachRecipe.id = element.recipe_id;
-    EachRecipe.key = element.recipe_id;
     EachRecipe.className = "recipe";
 
     // Set content using template literals
@@ -79,10 +85,13 @@ function ListItems(currRecipeArray) {
     EachRecipe.addEventListener("click", function () {
       displayInDetail(this.id - 1);
 
+      // toggling  back button div and detail display of selected item
       backButton.classList.remove("Hide");
       EachRecipeDetails.classList.remove("Hide");
       backButton.classList.add("display");
       EachRecipeDetails.classList.add("display");
+
+      // removing all element displaying div
       ListAllElement.classList.add("Hide");
       ListAllElement.classList.remove("display");
     });
@@ -93,6 +102,7 @@ function ListItems(currRecipeArray) {
 }
 
 function displayInDetail(index) {
+  // accessing recipe by index 
   let currRecipe = currRecipeArray[index];
 
   // Clear existing content
@@ -132,7 +142,7 @@ function displayInDetail(index) {
         </div>
     `;
 }
-
+// event listner to work on search bar querry
 searchbar.addEventListener("input", (e) => {
   const val = e.target.value;
   let filteredRecipes = [
@@ -143,7 +153,7 @@ searchbar.addEventListener("input", (e) => {
     ),
   ];
 
-  //   Remove duplicates by converting to a Set and back to an array
+  //   Remove duplicates by converting to a Set and back to an array 
   filteredRecipes = [...new Set(filteredRecipes)];
 
   // Display the filtered list
