@@ -192,14 +192,14 @@ displayCrousel();
 
 function displayCrousel() {
   let crouselArray = [
-    ["Logo.png", "Indian"],
-    ["Logo.png", "Italian"],
-    ["Logo.png", "Mexican"],
-    ["Logo.png", "French"],
-    ["Logo.png", "Thai"],
-    ["Logo.png", "American"],
-    ["Logo.png", "Japanese"],
-    ["Logo.png", "Chinese"],
+    ["https://sandinmysuitcase.com/wp-content/uploads/2021/01/Popular-Indian-Food-Dishes.jpg.webp", "Indian"],
+    ["https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-italian-dishes-1645372086.jpg", "Italian"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGbjz_oNDeLw-7AX5n4yWv26Ki0OhN8_eAew&s.png", "Mexican"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxJAgRXI4GIwIX_e0rwdoQfhhzwEbvH37gA&s.png", "French"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7oxiuHVwbwgNCIYCKvIbzoeQLkAnB4-Ieg&s.png", "Thai"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5o1LHnL_oCLsieMatEdAERNLW4cT40DQ-Mw&s.png", "American"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIK5whvL8FPoLXyPbMnePCEbpa82X0ZA0rkA&s.png", "Japanese"],
+    ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUUfPtf4KypR_CLC9a9QgSfhez1u2E0p4pOA&s.png", "Chinese"],
   ];
 
   crouselArray.forEach((item) => {

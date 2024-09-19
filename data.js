@@ -22,7 +22,7 @@ export const recipes = [
       "Toss the spaghetti with the bacon and egg mixture off the heat.",
       "Season with black pepper and salt to taste.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLnJ6g_2OuuQ_5NvizGNmC5wokc7H2eDiPA&s",
     categories: ["Italian", "Pasta", "Main Course"],
   },
   {
@@ -48,7 +48,7 @@ export const recipes = [
       "Add chicken and cook until browned.",
       "Add tomatoes and coconut milk, simmer until chicken is cooked through.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://vismaifood.com/storage/app/uploads/public/d58/a6e/2b7/thumb__700_0_0_0_auto.jpg",
     categories: ["Indian", "Curry", "Main Course"],
   },
   {
@@ -71,7 +71,7 @@ export const recipes = [
       "Add croutons and grated Parmesan cheese.",
       "Serve immediately.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD4JHrTdXGtuiDcGBvIGRKfrgoVE0QeP3yOw&s",
     categories: ["Salad", "Appetizer", "Healthy"],
   },
   {
@@ -96,7 +96,7 @@ export const recipes = [
       "Warm the tortillas.",
       "Assemble tacos with beef and your favorite toppings.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Xbix0cr8mlSexXrgaS7A2rhrsXiINF_25Q&s",
     categories: ["Mexican", "Main Course", "Tacos"],
   },
   {
@@ -119,7 +119,7 @@ export const recipes = [
       "Top with mozzarella and fresh basil.",
       "Bake in a hot oven until the crust is golden and cheese melts.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqLEoGo3bHJYJEpRIaveeChxuCkXPoLk3RNg&s",
     categories: ["Italian", "Pizza", "Main Course"],
   },
   {
@@ -144,7 +144,7 @@ export const recipes = [
       "Cook chicken in butter until browned.",
       "Add tomato paste and cream, simmer until the chicken is fully cooked.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPWLsZcgZ6Cn2nCJ9x1GEHDjY1E8NXbx6Nqg&s",
     categories: ["Indian", "Curry", "Main Course"],
   },
   {
@@ -169,7 +169,7 @@ export const recipes = [
       "Add eggs and vanilla, then dry ingredients.",
       "Stir in chocolate chips and bake until golden brown.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYcUjI7lKr1Mr6qbuf_G0i96UCmTv_g4ckvA&s",
     categories: ["Dessert", "Baking", "Cookies"],
   },
   {
@@ -192,7 +192,7 @@ export const recipes = [
       "Add beef broth and simmer.",
       "Top with toasted baguette slices and melted Gruyère cheese.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://assets.bonappetit.com/photos/5c634f0d050c433e0a336d6a/1:1/w_2560%2Cc_limit/healthyish-french-onion-horizontal.jpg",
     categories: ["French", "Soup", "Appetizer"],
   },
   {
@@ -218,7 +218,7 @@ export const recipes = [
       "Stir-fry chicken or shrimp with eggs and tamarind sauce.",
       "Toss with noodles, peanuts, and bean sprouts.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3jZGpkzpb6nuIzfe5FNluzCuEBEA2WEwEvw&s",
     categories: ["Thai", "Noodles", "Main Course"],
   },
   {
@@ -241,7 +241,7 @@ export const recipes = [
       "Layer with tomato sauce and cheese in a baking dish.",
       "Bake until golden and bubbly.",
     ],
-    image_url: "Logo.png",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfqNnlEjA9M594OHD6RNStrnhQ-afSPU9LnQ&s",
     categories: ["Italian", "Vegetarian", "Main Course"],
   },
 ];
