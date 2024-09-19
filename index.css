@@ -3,84 +3,594 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(206, 167, 12);
+  border-bottom: 3px solid rgb(206, 167, 12);
+  padding: 2px;
+}
+.container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 30%, #f9f5f5 100%),
+    url(https://media.istockphoto.com/id/1191080960/photo/traditional-turkish-breakfast-and-people-taking-various-food-wide-composition.jpg?s=612x612&w=0&k=20&c=PP5ejMisEwzcLWrNmJ8iPPm_u-4P6rOWHEDpBPL2n7Q=);
+  background-size: 100vw 600px;
+  background-repeat: no-repeat;
+  background-color: #f9f5f5ec;
+  display: flex;
+  padding: 60px 40px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  background-color: #f9f5f5ec;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: auto;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 20px 40px;
+  background-color: #fff; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.logo img {
+  height: 100px; 
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on logo */
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px; 
+}
+
+/* Individual link styling */
+.links a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.links a:hover {
+  color: rgb(206, 167, 12); 
+  border-bottom: 3px solid rgb(206, 167, 12); 
+  padding-bottom: 2px;
+}
+/* Carousel Section */
+
+#crousel {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+#crouselLine {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#crousel::-webkit-scrollbar {
+  display: none;
+}
+
+.crouselImage {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.crouselItems {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+/* Helpers section container */
+.helpers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 93%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search{
+  position: relative;
+  width: 90%;
+}
+
+/* Search bar container */
+.search input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search input[type="text"]:focus {
+  border-color: #4caf50; 
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+#searchbar {
+  background: #f9f9f9;
+}
+/* Filter button */
+.filter {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 20px;
+}
+
+.filter:hover {
+  background-color: #45a049;
+  transform: scale(1.05); 
+}
+
+.filter:active {
+  transform: scale(0.98); 
+}
+
+/* Filter list styling */
+
+.filterlist {
+  position: absolute;
+  margin-top: 40px;
+  right: 0.5rem;
+  top: 1rem;
+  padding: 10px;
+  background-color: white;
+  max-height: 15rem;
+  overflow: scroll;
+  z-index: 1;
+}
+
+.filterOption {
+  padding: 10px;
+}
+
+.filterlist::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container for all recipes */
+.ListAll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Individual recipe card */
+.recipe {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  max-width: 225px;
+  height: 350px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe image */
 .recipe-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  max-height: 65%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-.container{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 30%, #f9f5f5 100%),url(https://media.istockphoto.com/id/1191080960/photo/traditional-turkish-breakfast-and-people-taking-various-food-wide-composition.jpg?s=612x612&w=0&k=20&c=PP5ejMisEwzcLWrNmJ8iPPm_u-4P6rOWHEDpBPL2n7Q=);
-    background-size: 100vw 550px; 
-    background-repeat: no-repeat; 
-    background-color: #f9f5f5ec;
-    display: flex;
-    padding: 60px 40px;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+.recipe:hover .recipe-image {
+  transform: scale(1.05); 
 }
 
-.ListAll{
-    display: flex;
-    justify-content:space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.content{
-    border-top-left-radius: 2rem ;
-    border-top-right-radius: 2rem ;
-    background-color: #f9f5f5ec;
-    overflow: hidden;
-    height: 500px;
-    width: 90%;
-    z-index: 1;
+/* Recipe name */
+.recipe-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
-.recipe{
-    display: flex;
-    justify-content:space-evenly ;
-    background:rgb(238, 225, 198);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    max-width: 250px;
-    flex-wrap: wrap;
-    height: 350px;
-    margin: 20px;
+/* Recipe description */
+.recipe-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  white-space: wrap; 
 }
 
-.recipe-image{
-    position: relative;
-    width: 90%;
-    margin-left: 13px;
-    height: 60%;
-}
-.recipe-image-detail{
-    height: 350px;
-}
-.descOne{
-    width: 100%;
-}
 
-.details{
-    display: flex;
-    position: relative;
-    width: 100%;
-    justify-content: space-evenly;
-}
-/* 
-background: rgb(255,176,0);
-background: linear-gradient(90deg, rgba(255,176,0,1) 0%, rgba(235,193,49,1) 29%, rgba(253,255,0,0.9159313383556548) 100%); 
-*/
-
-
-
-
-.Hide {
+.recipe-description::-webkit-scrollbar {
     display: none;
   }
+
+/* Recipe categories */
+.recipe-categories {
+  font-size: 14px;
+  color: #888;
+  margin-top: auto; 
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.descOne {
+  width: 100%;
+  position: relative;
+}
+
+/* Container for recipe details */
+.details {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side: Image and recipe title */
+.details > div:first-child {
+  flex: 1;
+  text-align: center;
+}
+
+/* Recipe image */
+.recipe-image-detail {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe name */
+.recipe-name-detail {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Recipe description */
+.recipe-description-detail {
+  font-size: 16px;
+  z-index: 1;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Recipe categories */
+.recipe-categories-detail {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Right side: Recipe info and details */
+.details > div:last-child {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* Time details */
+.recipe-prep-time,
+.recipe-cook-time,
+.recipe-total-time,
+.recipe-servings {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Ingredients list */
+.recipe-ingredients ul,
+.recipe-instructions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.recipe-ingredients li,
+.recipe-instructions li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Section titles */
+.recipe-ingredients strong,
+.recipe-instructions strong {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Back button styling */
+.revButton {
+  display: inline-block;
+  background-color: #4caf50; 
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  z-index: 10; 
+}
+
+.revButton:hover {
+  background-color: #45a049; 
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(21, 19, 19);
+  height: auto;
+  color: rgb(241, 236, 236);
+  flex-wrap: wrap;
+}
+
+.contactUs,
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.contactUs {
+  max-width: 400px;
+}
+
+.footerLinks a {
+  color: white;
+  margin: 5px 0;
+}
+.footerLinks a:hover {
+  text-decoration: none;
+  color: rgb(206, 167, 12);
+  border-bottom: 3px solid rgb(206, 167, 12);
+  padding: 2px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(238, 225, 198);
+  border: none;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(240, 218, 174);
+}
+
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .recipe-image-detail {
+    max-width: 100%;
+  }
+
+  .details {
+    padding: 10px;
+  }
+
+  .recipe-name-detail {
+    font-size: 22px;
+  }
+
+  .recipe-description-detail {
+    font-size: 14px;
+  }
+
+  .recipe-ingredients li,
+  .recipe-instructions li {
+    font-size: 14px;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  #crousel {
+    width: 95%;
+  }
+  .Inputform {
+    width: 90%;
+  }
+  .helpers {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search input[type="text"] {
+    max-width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .filter {
+    margin-left: 0;
+    width: 40%;
+    text-align: center;
+  }
+  .recipe {
+    min-width: 60%; 
+  }
+  .revButton {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: -30px; 
+  }
+  .crouselImage {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .links a {
+    font-size: 16px;
+  }
+  .recipe {
+    min-width: 90%; 
+  }
+  .filter{
+    
+    width: 90%;
+  }
+
+  #crouselLine {
+    font-size: 20px;
+  }
+  .crouselImage {
+    width: 75px;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .details {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .details > div {
+    flex: none;
+    width: 100%;
+  }
+
+  .details > div:last-child {
+    padding: 0;
+  }
+  .recipe {
+    min-width: 45%;
+  }
+}
+
+.Hide {
+  display: none;
+}

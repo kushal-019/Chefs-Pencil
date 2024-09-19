@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(206, 167, 12);
+  border-bottom: 3px solid rgb(206, 167, 12);
+  padding: 2px;
+}
+
+.container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 30%, #f9f5f5 100%),
+    url(https://media.istockphoto.com/id/1191080960/photo/traditional-turkish-breakfast-and-people-taking-various-food-wide-composition.jpg?s=612x612&w=0&k=20&c=PP5ejMisEwzcLWrNmJ8iPPm_u-4P6rOWHEDpBPL2n7Q=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  background-color: #f9f5f5ec;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: auto;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #fff; /* Set background color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Logo container */
+.logo img {
+  height: 100px; /* Adjust the size of the logo */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on logo */
+.logo img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px; /* Space between each link */
+}
+
+/* Individual link styling */
+.links a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.links a:hover {
+  color: rgb(206, 167, 12); /* Change color on hover */
+  border-bottom: 3px solid rgb(206, 167, 12); /* Underline effect */
+  padding-bottom: 2px;
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(21, 19, 19);
+  height: auto;
+  color: rgb(241, 236, 236);
+  flex-wrap: wrap;
+}
+
+.contactUs,
+.footerLinks {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footerLinks a {
+  color: white;
+  margin: 5px 0;
+}
+
+.footerLinks a:hover {
+  color: rgb(206, 167, 12);
+  border-bottom: 3px solid rgb(206, 167, 12);
+  padding: 2px;
+}
+
+textarea {
+  width: 100%;
+  background: rgb(235, 234, 234);
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.Inputform {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .Inputform {
+    width: 90%;
+  }
+
+  .container {
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+  }
+  .Footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 80px; /* Reduce logo size on smaller screens */
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 15px; /* Space links vertically */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .links a {
+    font-size: 16px; /* Slightly smaller text on very small screens */
+  }
+}

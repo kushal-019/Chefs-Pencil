@@ -14,7 +14,7 @@
           <!-- Logo for the site -->
           <div class="logo">
             <img
-              src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg"
+              src="Logo.png"
               style="height: 200px"
             />
           </div>
@@ -23,31 +23,38 @@
           <div class="links">
             <div class="home"><a href="#">Home</a></div>
             <div class="addProduct"><a href="AddItem.html">Add New Recipe</a></div>
+            <div class=""><a href="#contact">Contact us</a></div>
           </div>
         </div>
       </div>
-      <!-- All the recipies to be loaded dynamilcally  -->
-      <div class="ListAllProduct">
-        <div class="filter">Filter</div>
+      <!-- Crousel of all the top categories -->
+      <div id="crousel">
+        <p id="crouselLine">Top Categories</p>
+      </div>
+      <div class="helpers">
         <div class="search">
           <input
-            type="text"
-            name="searchbar"
-            id="searchbar"
-            placeholder="Search for the recipes"
+          type="text"
+          name="searchbar"
+          id="searchbar"
+          placeholder="Search for the recipes"
           />
         </div>
+        <div class="filter">Filter</div>
         <div class="filterlist"></div>
-        <div class="ListAll"></div>
       </div>
+      
+      <!-- All the recipies to be loaded dynamilcally  -->
+        <div class="ListAll"></div>
+        </div>
 
       <div class="descOne">
-        <div class="revButton">Back</div>
+        <div class="revButton Hide">Back</div>
         <div class="details"></div>
       </div>
-
+    </div>
       <!-- Footer -->
-      <div class="Footer">
+      <div class="Footer" id="contact">
         <!-- Comment section -->
         <div class="contactUs">
           <p>Contact Us</p>
@@ -62,22 +69,22 @@
         </div>
         <!-- Some additional links -->
         <div class="footerLinks">
-          <p>About</p>
-          <p>Careers</p>
-          <p>Team</p>
-          <p>Chefs One</p>
-          <p>chefs Instamart</p>
+          <a>About</a>
+          <a>Careers</a>
+          <a>Team</a>
+          <a>Chefs One</a>
+          <a>chefs Instamart</a>
         </div>
         <div class="footerLinks">
-          <p>Ride with us</p>
-          <p>Legal</p>
-          <p>Terms & Conditions</p>
-          <p>Cookie Policy</p>
-          <p>Privacy Policy</p>
-          <p>Investor Relations</p>
+          <a>Ride with us</a>
+          <a>Legal</a>
+          <a>Terms & Conditions</a>
+          <a>Cookie Policy</a>
+          <a>Privacy Policy</a>
+          <a>Investor Relations</a>
         </div>
       </div>
-    </div>
+    
   </body>
   <script src="index.js" type="module"></script>
 </html>

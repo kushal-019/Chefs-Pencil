@@ -8,7 +8,7 @@ function capitalizeFirstLetter(str) {
 }
 
 document.getElementById("recipeForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   //   Retrieve the existing array from localStorage
   let storedRecipes = JSON.parse(localStorage.getItem("RecipeArray")) || [];
@@ -71,6 +71,8 @@ document.getElementById("recipeForm").addEventListener("submit", function (e) {
       }
       
     });
+
+    window.alert("Item added SuccessFully")
   } else {
     // data already present , no update made
     console.log("Recipe with the same name already exists.");

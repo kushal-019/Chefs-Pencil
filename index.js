@@ -7,28 +7,30 @@ let EachRecipeDetails = document.getElementsByClassName("details")[0];
 let FilterButton = document.getElementsByClassName("filter")[0];
 let FilterList = document.getElementsByClassName("filterlist")[0];
 let searchbar = document.getElementById("searchbar");
+let crousel = document.getElementById("crousel");
 
 // Fetching data and categories present in localstorage
 const recipeArray = localStorage.getItem("RecipeArray");
 const categoriesArray = localStorage.getItem("categoriesArray");
 
 // updating data from data.js with localstorage recipies data
-const currRecipeArray = recipeArray 
-? [ ...recipes , ...JSON.parse(recipeArray)] 
-: recipes;
+const currRecipeArray = recipeArray
+  ? [...recipes, ...JSON.parse(recipeArray)]
+  : recipes;
 
 // updating categories from data.js with localstorage categories data
-const Presentcategories = categoriesArray ?
-  [ ...categories , ...JSON.parse(categoriesArray)] 
+const Presentcategories = categoriesArray
+  ? [...categories, ...JSON.parse(categoriesArray)]
   : categories;
 
 function displayDropDown() {
   FilterList.innerHTML = "";
   FilterList.classList.remove("Hide");
-
+  Presentcategories.sort();
   // Create and append option elements
   Presentcategories.forEach((category) => {
     const option = document.createElement("div");
+    option.className = "filterOption";
     option.textContent = category;
     // adding functionallity associated to each option
     option.addEventListener("click", function () {
@@ -97,11 +99,16 @@ function ListItems(currRecipeArray) {
 }
 
 function displayInDetail(index) {
-  // accessing recipe by index 
+  // accessing recipe by index
   let currRecipe = currRecipeArray[index];
 
   // Clear existing content
   EachRecipeDetails.innerHTML = "";
+
+  window.scrollTo({
+    top: 400,
+    behavior: "smooth",
+  });
 
   // Create and append elements with template literals
   EachRecipeDetails.innerHTML = `
@@ -142,20 +149,20 @@ function displayInDetail(index) {
     `;
 }
 // event listner to work on search bar querry
-  searchbar.addEventListener("input", (e) => {
-    const val = capitalizeFirstLetter(e.target.value); // Convert value to lowercase once
-    let filteredRecipes = currRecipeArray.filter((recipe) => {
-      return (
-        recipe.categories.includes(val) || 
-        // Check categories
-        recipe.ingredients.includes(val) || 
-        // Check ingredients
-        recipe.recipe_name.toLowerCase().startsWith(val.toLowerCase()) 
-         // Check recipe name
-      );
-    });
-  
-  //   Remove duplicates by converting to a Set and back to an array 
+searchbar.addEventListener("input", (e) => {
+  const val = capitalizeFirstLetter(e.target.value); // Convert value to lowercase once
+  let filteredRecipes = currRecipeArray.filter((recipe) => {
+    return (
+      recipe.categories.includes(val) ||
+      // Check categories
+      recipe.ingredients.includes(val) ||
+      // Check ingredients
+      recipe.recipe_name.toLowerCase().startsWith(val.toLowerCase())
+      // Check recipe name
+    );
+  });
+
+  //   Remove duplicates by converting to a Set and back to an array
   filteredRecipes = [...new Set(filteredRecipes)];
 
   // Display the filtered list
@@ -175,9 +182,40 @@ backButton.addEventListener("click", function (e) {
   ListAllElement.classList.remove("Hide");
 });
 
-
 // capitalizing first letter for inprovised searching and lowercasing rest to avoid incosistancy
 function capitalizeFirstLetter(str) {
   str = str.toLowerCase();
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+displayCrousel();
+
+function displayCrousel() {
+  let crouselArray = [
+    ["Logo.png", "Indian"],
+    ["Logo.png", "Italian"],
+    ["Logo.png", "Mexican"],
+    ["Logo.png", "French"],
+    ["Logo.png", "Thai"],
+    ["Logo.png", "American"],
+    ["Logo.png", "Japanese"],
+    ["Logo.png", "Chinese"],
+  ];
+
+  crouselArray.forEach((item) => {
+    let EachItem = document.createElement("div");
+    EachItem.className = "crouselItems";
+    EachItem.dataset.value = item[1];
+
+    EachItem.innerHTML = `
+      <img class="crouselImage" src="${item[0]}" />
+      <p>${item[1]}</p>`;
+
+      // Add click event listener
+      EachItem.addEventListener("click", function () {
+        filterRecipesByCategory(this.dataset.value);
+      });
+
+      crousel.appendChild(EachItem);
+  });
 }

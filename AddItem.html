@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chef's Pencil - Add New Recipie</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Additem.css">
   </head>
   <body>
     <div class="container">
         <!-- Header  -->
-      <div class="navbar">
-
-        <!-- Logo for the site -->
-        <div class="logo"><img src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg" style="height: 200px;"></div>
-
-        <!-- Navlinks -->
-        <div class="links">
-          <div class="home"><a href="index.html">Home</a></div>
-          <div class="addProduct"><a href="#">List New</a></div>
+        <div class="content">
+          <div class="navbar">
+            <!-- Logo for the site -->
+            <div class="logo">
+              <img
+                src="Logo.png"
+                style="height: 200px"
+              />
+            </div>
+  
+            <!-- Navlinks -->
+            <div class="links">
+              <div class="home"><a href="index.html">Home</a></div>
+              <div class="addProduct"><a href="#">Add New Recipe</a></div>
+              <div class=""><a href="#contact">Contact us</a></div>
+            </div>
+          </div>
         </div>
-      </div>
+
        <!-- Input  form to add new Recipes -->
       <div class="Inputform">
         <h1>Recipe Input Form</h1>
@@ -41,7 +49,7 @@
           <input type="text" id="total_time" name="total_time" required>
     
           <label for="servings">Servings:</label>
-          <input type="number" id="servings" name="servings" required>
+          <input type="text" id="servings" name="servings" required>
     
           <label for="ingredients">Ingredients (comma-separated):</label>
           <input type="text" id="ingredients" name="ingredients" required>
@@ -58,10 +66,11 @@
           <button type="submit" >Submit Recipe</button>
         </form>
       </div>
+    </div>
 
       
       <!-- Footer -->
-      <div class="Footer">
+      <div class="Footer" id="contact">
         <!-- Comment section -->
         <div class="contactUs">
             <p>Contact Us</p>
@@ -90,7 +99,7 @@
             <p>Investor Relations</p>
             
         </div>
-      </div>
+      
     </div>
   </body>
   <script src="AddItem.js" type="module"></script>
