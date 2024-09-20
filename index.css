@@ -43,41 +43,37 @@ a:hover {
   height: auto;
 }
 
-/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   padding: 20px 40px;
-  background-color: #fff; 
+  background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  background:linear-gradient(to left, rgba(0, 0, 0, 0.568) 35%, #dad7d7 100%), url(https://t3.ftcdn.net/jpg/02/52/12/40/360_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg);
-  background-size:cover;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.568) 35%, #dad7d7 100%),
+    url(https://t3.ftcdn.net/jpg/02/52/12/40/360_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* Logo container */
 .logo img {
-  height: 100px; 
+  height: 100px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
-/* Hover effect on logo */
 .logo img:hover {
   transform: scale(1.05);
 }
 
-/* Navigation links */
 .links {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30px; 
+  gap: 30px;
 }
 
-/* Individual link styling */
 .links a {
   font-size: 18px;
   font-weight: bold;
@@ -86,13 +82,11 @@ a:hover {
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Hover effect for navigation links */
 .links a:hover {
-  color: rgb(206, 167, 12); 
-  border-bottom: 3px solid rgb(206, 167, 12); 
+  color: rgb(206, 167, 12);
+  border-bottom: 3px solid rgb(206, 167, 12);
   padding-bottom: 2px;
 }
-/* Carousel Section */
 
 #crousel {
   display: flex;
@@ -118,21 +112,21 @@ a:hover {
 }
 
 #crousel::-webkit-scrollbar {
-  height: 10px;              
+  height: 10px;
 }
 
 #crousel::-webkit-scrollbar-track {
-  background: #f1f1f1;       
+  background: #f1f1f1;
 }
 
 #crousel::-webkit-scrollbar-thumb {
-  background-color: #d6c93c;   
-  border-radius: 10px;     
-  border: 3px solid #f1f1f1; 
+  background-color: #d6c93c;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
 }
 
 #crousel::-webkit-scrollbar-thumb:hover {
-  background:#9d9321;      
+  background: #9d9321;
 }
 
 .crouselImage {
@@ -149,7 +143,6 @@ a:hover {
   padding: 10px;
 }
 
-/* Helpers section container */
 .helpers {
   display: flex;
   justify-content: space-between;
@@ -165,12 +158,11 @@ a:hover {
   position: relative;
 }
 
-.search{
+.search {
   position: relative;
   width: 90%;
 }
 
-/* Search bar container */
 .search input[type="text"] {
   width: 100%;
   max-width: 400px;
@@ -183,7 +175,7 @@ a:hover {
 }
 
 .search input[type="text"]:focus {
-  border-color: #4caf50; 
+  border-color: #4caf50;
   outline: none;
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
 }
@@ -191,7 +183,7 @@ a:hover {
 #searchbar {
   background: #f9f9f9;
 }
-/* Filter button */
+
 .filter {
   background-color: #4caf50;
   color: white;
@@ -207,14 +199,12 @@ a:hover {
 
 .filter:hover {
   background-color: #45a049;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .filter:active {
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
-
-/* Filter list styling */
 
 .filterlist {
   position: absolute;
@@ -236,7 +226,6 @@ a:hover {
   display: none;
 }
 
-/* Container for all recipes */
 .ListAll {
   display: flex;
   flex-wrap: wrap;
@@ -245,11 +234,10 @@ a:hover {
   padding: 40px;
 }
 
-/* Individual recipe card */
 .recipe {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -266,7 +254,6 @@ a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Recipe image */
 .recipe-image {
   width: 100%;
   height: auto;
@@ -278,10 +265,9 @@ a:hover {
 }
 
 .recipe:hover .recipe-image {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
-/* Recipe name */
 .recipe-name {
   font-size: 22px;
   font-weight: bold;
@@ -291,7 +277,6 @@ a:hover {
   letter-spacing: 1px;
 }
 
-/* Recipe description */
 .recipe-description {
   font-size: 16px;
   color: #666;
@@ -299,19 +284,17 @@ a:hover {
   margin-bottom: 15px;
   overflow: scroll;
   text-overflow: ellipsis;
-  white-space: wrap; 
+  white-space: wrap;
 }
 
-
 .recipe-description::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
-/* Recipe categories */
 .recipe-categories {
   font-size: 14px;
   color: #888;
-  margin-top: auto; 
+  margin-top: auto;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -321,10 +304,9 @@ a:hover {
   position: relative;
 }
 
-/* Container for recipe details */
 .details {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   padding: 40px;
@@ -333,13 +315,11 @@ a:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Left side: Image and recipe title */
 .details > div:first-child {
   flex: 1;
   text-align: center;
 }
 
-/* Recipe image */
 .recipe-image-detail {
   width: 100%;
   max-width: 350px;
@@ -349,7 +329,6 @@ a:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Recipe name */
 .recipe-name-detail {
   font-size: 24px;
   font-weight: bold;
@@ -357,7 +336,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* Recipe description */
 .recipe-description-detail {
   font-size: 16px;
   z-index: 1;
@@ -366,20 +344,17 @@ a:hover {
   margin-bottom: 15px;
 }
 
-/* Recipe categories */
 .recipe-categories-detail {
   font-size: 14px;
   color: #888;
   margin-bottom: 20px;
 }
 
-/* Right side: Recipe info and details */
 .details > div:last-child {
   flex: 1;
   padding: 0 20px;
 }
 
-/* Time details */
 .recipe-prep-time,
 .recipe-cook-time,
 .recipe-total-time,
@@ -389,7 +364,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* Ingredients list */
 .recipe-ingredients ul,
 .recipe-instructions ul {
   list-style-type: disc;
@@ -403,7 +377,6 @@ a:hover {
   margin-bottom: 8px;
 }
 
-/* Section titles */
 .recipe-ingredients strong,
 .recipe-instructions strong {
   font-size: 18px;
@@ -412,10 +385,9 @@ a:hover {
   display: block;
 }
 
-/* Back button styling */
 .revButton {
   display: inline-block;
-  background-color: #4caf50; 
+  background-color: #4caf50;
   color: rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 16px;
@@ -428,11 +400,11 @@ a:hover {
   position: absolute;
   top: -40px;
   left: 20px;
-  z-index: 10; 
+  z-index: 10;
 }
 
 .revButton:hover {
-  background-color: #45a049; 
+  background-color: #45a049;
 }
 
 .Footer {
@@ -500,7 +472,91 @@ textarea:focus {
   outline: none;
 }
 
-/* Media Queries for responsiveness */
+.links {
+  position: relative;
+  cursor: pointer;
+}
+
+.Hamburger {
+  display: none;
+}
+
+.HamburgerLogo img {
+  width: 40px; 
+  cursor: pointer;
+}
+
+.HamburgerItems {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ); 
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HamburgerItems a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 15px;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.HamburgerItems.show {
+  display: flex;
+}
+
+.HamburgerLogo {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(206, 167, 12); 
+  mask-image: url('menus.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  display: block;
+}
+.div div{
+  padding: 20px;
+}
+
+@media (max-width: 992px) {
+  .details {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .details > div {
+    flex: none;
+    width: 100%;
+  }
+
+  .details > div:last-child {
+    padding: 0;
+  }
+  .recipe {
+    min-width: 45%;
+  }
+}
+
 @media (max-width: 768px) {
   .recipe-image-detail {
     max-width: 100%;
@@ -523,7 +579,7 @@ textarea:focus {
     font-size: 14px;
   }
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px 20px;
   }
 
@@ -531,10 +587,16 @@ textarea:focus {
     height: 80px;
   }
 
+  .Hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .HamburgerLogo {
+    fill: #9d9321;
+    width: 40px;
+  }
   .links {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
+    display: none;
   }
 
   #crousel {
@@ -549,22 +611,23 @@ textarea:focus {
   }
 
   .search input[type="text"] {
-    max-width: 100%; 
+    max-width: 90%;
     margin-bottom: 10px;
   }
 
   .filter {
     margin-left: 0;
     width: 40%;
+    max-width: 80%;
     text-align: center;
   }
   .recipe {
-    min-width: 60%; 
+    min-width: 60%;
   }
   .revButton {
     font-size: 14px;
     padding: 8px 16px;
-    top: -30px; 
+    top: -30px;
   }
   .crouselImage {
     width: 100px;
@@ -577,11 +640,13 @@ textarea:focus {
     font-size: 16px;
   }
   .recipe {
-    min-width: 90%; 
+    min-width: 90%;
   }
-  .filter{
-    
+  .filter {
     width: 90%;
+  }
+  .navbar {
+    flex-direction: column;
   }
 
   #crouselLine {
@@ -590,26 +655,6 @@ textarea:focus {
   .crouselImage {
     width: 75px;
     height: 75px;
-  }
-}
-
-/* Responsive design */
-@media (max-width: 992px) {
-  .details {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .details > div {
-    flex: none;
-    width: 100%;
-  }
-
-  .details > div:last-child {
-    padding: 0;
-  }
-  .recipe {
-    min-width: 45%;
   }
 }
 

@@ -48,7 +48,6 @@ a:hover {
   height: auto;
 }
 
-/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -62,27 +61,23 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-/* Logo container */
 .logo img {
-  height: 100px; /* Adjust the size of the logo */
+  height: 100px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
-/* Hover effect on logo */
 .logo img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05); 
 }
 
-/* Navigation links */
 .links {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30px; /* Space between each link */
+  gap: 30px; 
 }
 
-/* Individual link styling */
 .links a {
   font-size: 18px;
   font-weight: bold;
@@ -91,10 +86,9 @@ a:hover {
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Hover effect for navigation links */
 .links a:hover {
-  color: rgb(206, 167, 12); /* Change color on hover */
-  border-bottom: 3px solid rgb(206, 167, 12); /* Underline effect */
+  color: rgb(206, 167, 12); 
+  border-bottom: 3px solid rgb(206, 167, 12);
   padding-bottom: 2px;
 }
 
@@ -196,6 +190,63 @@ textarea:focus {
   outline: none;
 }
 
+.links {
+ position: relative;
+ cursor: pointer;
+}
+
+.Hamburger {
+ display: none;
+}
+
+.HamburgerLogo {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(206, 167, 12); 
+  mask-image: url('menus.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  display: block;
+}
+
+.HamburgerItems {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 10;
+ background-color: rgba(0, 0, 0, 0.9);
+ display: none;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.HamburgerItems a {
+ color: white;
+ text-decoration: none;
+ font-size: 24px;
+ margin: 15px;
+}
+
+.backButton {
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ font-size: 20px;
+ color: white;
+ cursor: pointer;
+}
+
+.HamburgerItems.show {
+ display: flex;
+}
+
+.div div{
+  padding: 20px;
+}
+
 @media (max-width: 768px) {
   .Inputform {
     width: 90%;
@@ -211,23 +262,29 @@ textarea:focus {
     padding: 20px;
   }
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px 20px;
   }
 
   .logo img {
-    height: 80px; /* Reduce logo size on smaller screens */
+    height: 80px;
   }
 
+  .Hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  
   .links {
-    flex-direction: column;
-    gap: 15px; /* Space links vertically */
-    margin-top: 10px;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .links a {
-    font-size: 16px; /* Slightly smaller text on very small screens */
+    font-size: 16px; 
+  }
+  .navbar{
+    flex-direction: column;
   }
 }

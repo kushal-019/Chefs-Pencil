@@ -8,6 +8,11 @@ let FilterButton = document.getElementsByClassName("filter")[0];
 let FilterList = document.getElementsByClassName("filterlist")[0];
 let searchbar = document.getElementById("searchbar");
 let crousel = document.getElementById("crousel");
+// let hamburgerIcon = document.getElementsByClassName("HamburgerLogo")[0];
+// let hamburger = document.getElementsByClassName("Hamburger")[0];
+// let links = document.getElementsByClassName("links")[0];
+
+
 
 // Fetching data and categories present in localstorage
 const recipeArray = localStorage.getItem("RecipeArray");
@@ -219,3 +224,18 @@ function displayCrousel() {
       crousel.appendChild(EachItem);
   });
 }
+
+// Select hamburger logo and menu
+const hamburgerLogo = document.querySelector('.HamburgerLogo');
+const hamburgerItems = document.querySelector('.HamburgerItems');
+const backHamburger = document.querySelector('.backButton');
+
+// Show the menu when the hamburger is clicked
+hamburgerLogo.addEventListener('click', () => {
+  hamburgerItems.classList.add('show');
+});
+
+// Hide the menu when the back button is clicked
+backHamburger.addEventListener('click', () => {
+  hamburgerItems.classList.remove('show');
+});

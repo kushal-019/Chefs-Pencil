@@ -82,3 +82,18 @@ document.getElementById("recipeForm").addEventListener("submit", function (e) {
   localStorage.setItem("RecipeArray", JSON.stringify(storedRecipes));
   localStorage.setItem("categoriesArray", JSON.stringify(storedCategories));
 });
+
+// Select hamburger logo and menu
+const hamburgerLogo = document.querySelector('.HamburgerLogo');
+const hamburgerItems = document.querySelector('.HamburgerItems');
+const backHamburger = document.querySelector('.backButton');
+
+// Show the menu when the hamburger is clicked
+hamburgerLogo.addEventListener('click', () => {
+  hamburgerItems.classList.add('show');
+});
+
+// Hide the menu when the back button is clicked
+backHamburger.addEventListener('click', () => {
+  hamburgerItems.classList.remove('show');
+});
